@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,46 +12,36 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.grey,
         body: SafeArea(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Container(
-                width: 100.0,
-                height: double.infinity,
-                color: Colors.red,
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    width: 100.0,
-                    height: 100.0,
-                    decoration: BoxDecoration(
-                      color: Colors.yellow,
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
-                  ),
-                  Container(
-                    width: 100.0,
-                    height: 100.0,
-                    decoration: BoxDecoration(
-                      color: Colors.yellow.withOpacity(0.5),
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
-                  )
-                ],
-              ),
-              Container(
-                width: 100.0,
-                height: double.infinity,
-                color: Colors.blue,
-              )
-            ],
-          ),
-        ),
+            child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: const <Widget>[
+            CircleAvatar(
+              radius: 50.0,
+              backgroundImage: AssetImage('images/me.jpg'),
+            ),
+            Text(
+              'Matheus Eli',
+              style: TextStyle(
+                  fontSize: 40.0,
+                  height: 1.5,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'SpaceGrotesk'),
+            ),
+            Text(
+              'WEB DEVELOPER',
+              style: TextStyle(
+                  fontSize: 20.0,
+                  letterSpacing: 2.5,
+                  fontFamily: 'SourceSansPro',
+                  fontWeight: FontWeight.bold,
+                  color: CupertinoColors.lightBackgroundGray),
+            )
+          ],
+        )),
       ),
     );
   }
