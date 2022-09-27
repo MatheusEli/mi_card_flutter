@@ -40,6 +40,13 @@ class MyApp extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     color: CupertinoColors.lightBackgroundGray),
               ),
+              SizedBox(
+                height: 20.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.white,
+                ),
+              ),
               // Container(
               //     decoration: BoxDecoration(
               //       color: Colors.white,
@@ -118,7 +125,7 @@ class MyApp extends StatelessWidget {
               //     )),
               Card(
                   margin: EdgeInsets.only(
-                      bottom: 5.0, top: 55.0, left: 25.0, right: 25.0),
+                      bottom: 5.0, top: 5.0, left: 25.0, right: 25.0),
                   child: ListTile(
                     leading: Icon(Icons.phone, color: Colors.grey),
                     title: Text(
