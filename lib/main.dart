@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
                   fontSize: 40.0,
                   height: 1.5,
                   color: Colors.white,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w400,
                   fontFamily: 'SpaceGrotesk'),
             ),
             Text(
